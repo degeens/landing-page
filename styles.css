@@ -9,6 +9,19 @@ body {
 
 .container {
     max-width: 576px;
+    border-radius: 0.5rem; /* Needed for box shadow to respect rounded corners */
+}
+
+@media (min-width: 576px) {
+    .container > header {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    .container > main {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
 }
 
 @media (max-width: 576px) {
